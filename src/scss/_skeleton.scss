@@ -1,0 +1,65 @@
+/* _skeleton.scss */
+
+body {
+    background-color: $brand-color;
+
+    #loader, header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100vw;
+        height: 100vh;
+
+        z-index: 100;
+    }
+
+    #loader {
+        .image {
+            max-width: 25vw;
+        }
+    }
+
+    header {
+        .image {
+            max-width: 80vw;
+        }
+
+        nav {
+            position: absolute;
+            bottom: 5vh;
+            left: 0;
+            right: 0;
+
+            a {
+                display: inline-block;
+                margin: 0 2rem;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+    .newsletter {
+
+    }
+
+    .social-media {
+        position: absolute;
+        top: 2.5vh;
+        right: 2.5vw;
+
+        z-index: 420;
+
+        li:last-child {
+            a {
+                margin-right: 0;
+            }
+        }
+
+        li:hover, li:active {
+            transform: translate(1px, 1px);
+            transition: $transition-fast;
+        }
+    }
+}

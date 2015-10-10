@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="bitzerApp">
     <head>
         <meta charset="utf-8">
 
@@ -8,8 +8,10 @@
         <script src="./assets/angular.min.js"></script>
         <script src="./assets/angular-route.min.js"></script>
         <script src="./assets/angular-animate.min.js"></script>
+        <script src="./js/app.js"></script>
 
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="./assets/fa/css/font-awesome.min.css">
         <link rel="stylesheet" href="./css/app.css">
 
         <!--[if lt IE 9]>
@@ -17,17 +19,34 @@
         <![endif]-->
     </head>
 
-    <body>
-        <header>
-            <div id="header-image">
+    <body ng-controller="skeletonController as skeleton">
+        <div id="loader" ng-if="skeleton.loading">
+            <div class="image">
+                <img src="./img/profile.png" class="loading-animation">
+            </div>
+        </div>
+        <div class="social-media" ng-if="!skeleton.loading">
+            <ul>
+                <li><a href="https://soundcloud.com/thedegsmusic" aria-label="Soundcloud"><i class="fa fa-soundcloud"></i></a></li>
+                <li><a href="https://facebook.com/thedegsmusic" aria-label="Facebook"><i class="fa fa-facebook-square"></i></a></li>
+                <li><a href="https://twitter.com/thedegsmusic" aria-label="Twitter"><i class="fa fa-twitter-square"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCpGIgDBS0AnDsa_5Bm7OYDw/" aria-label="YouTube"><i class="fa fa-youtube-square"></i></a></li>
+            </ul>
+        </div>
+        <header ng-if="!skeleton.loading">
+            <div class="image">
                 <img src="./img/the_degs_white.png">
             </div>
             <nav>
-                <span>News</span>
-                <span>Music</span>
-                <span>Gigs</span>
-                <span>About</span>
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">Gigs</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
             </nav>
         </header>
+
+        <div ng-view autoscroll="true"></div>
     </body>
 </html>

@@ -1,0 +1,84 @@
+/* _fonts.scss */
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+a, a:link, a:visited, a:focus {
+    color: $white-color;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: $white-color;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+        display: inline-block;
+    }
+}
+
+
+/**
+ * Navigation links
+ */
+nav {
+    li {
+        a {
+            font-size: 2rem;
+            line-height: 2rem;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 0.25rem solid transparent;
+
+            transition: $transition-mid;
+
+            &:hover, &:active {
+                color: $white-color;
+                border-bottom-color: $white-color;
+
+                transition: $transition-fast;
+            }
+        }
+    }
+}
+
+
+
+/**
+ * Social media
+ */
+.social-media {
+    a {
+        margin: 0 0.25rem;
+        color: $gray-color;
+
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+
+        transition: $transition-mid;
+
+        &:hover {
+            color: $white-color;
+            transition: $transition-mid;
+        }
+    }
+}
