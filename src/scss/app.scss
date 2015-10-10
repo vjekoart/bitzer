@@ -1,0 +1,53 @@
+/* app.scss */
+
+
+@import '_normalize';
+
+
+body {
+    background-color: #0c1728;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#header-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+nav {
+    position: absolute;
+    bottom: 5vw;
+    left: 5vw;
+    right: 5vw;
+    text-align: center;
+}
+
+nav span {
+    padding: 16px 0;
+    margin: 0 32px;
+    color: #e0e0e0;
+    font-size: 32px;
+    line-height: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav span:hover {
+    cursor: pointer;
+    color: #fff;
+    border-bottom-color: #fff;
+    transition: all 0.2s ease;
+}
