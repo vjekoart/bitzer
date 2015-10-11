@@ -43,6 +43,29 @@ body {
                 padding: 1rem 0;
             }
         }
+
+        transition: $transition-mid;
+
+        &.browse {
+            align-items: flex-start;
+            height: 8rem;
+            min-height: 0;
+            max-height: 8rem;
+            transition: $transition-mid;
+
+            .image {
+                height: 4rem;
+
+                img {
+                    margin: 1rem 0 0 0;
+                    height: 3rem;
+                }
+            }
+
+            nav {
+                bottom: 0;
+            }
+        }
     }
 
     .newsletter {

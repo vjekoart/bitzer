@@ -38,17 +38,17 @@
                 <li><a href="https://www.youtube.com/channel/UCpGIgDBS0AnDsa_5Bm7OYDw/" aria-label="YouTube"><i class="fa fa-youtube-square"></i></a></li>
             </ul>
         </div>
-        <header class="container" ng-if="!skeleton.loading">
+        <header class="container" ng-class="{ 'browse' : skeleton.browse }" ng-if="!skeleton.loading">
             <h1 class="sr-only">The Degs</h1>
             <div class="image">
                 <img src="./img/the_degs_white.png">
             </div>
             <nav>
                 <ul>
-                    <li><a href="#/news">News</a></li>
-                    <li><a href="#/music">Music</a></li>
-                    <li><a href="#/gigs">Gigs</a></li>
-                    <li><a href="#/page/about">About</a></li>
+                    <li><a ng-click="skeleton.changeNav()" ng-href="#/news">News</a></li>
+                    <li><a ng-click="skeleton.changeNav()" ng-href="#/music">Music</a></li>
+                    <li><a ng-click="skeleton.changeNav()" ng-href="#/gigs">Gigs</a></li>
+                    <li><a ng-click="skeleton.changeNav()" ng-href="#/page/about">About</a></li>
                 </ul>
             </nav>
         </header>

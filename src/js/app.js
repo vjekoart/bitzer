@@ -3,7 +3,7 @@
 angular.module('bitzerApp', [
     'ngRoute',
     'ngAnimate',
-    'ui.bootstrap',
+    //'ui.bootstrap',
     'bitzer.controllers'
 ])
 

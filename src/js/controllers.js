@@ -5,14 +5,23 @@ angular.module('bitzer.controllers', [])
 /**
  * Skeleton controller
  */
-.controller('skeletonController', ['$scope', '$timeout', '$uibModal', function ($scope, $timeout, $uibModal) {
+ // IMPORTANT: When adding modal window for newsletter, add dependency $uibModal
+.controller('skeletonController', ['$scope', '$location', '$timeout', function ($scope, $location, $timeout) {
     var vm = this;
+    vm.browse = false;
+    vm.loading = true;
 
-    vm.loading = false;
+    vm.changeNav = function () {
+        vm.browse = true;
+    };
 
-    /*$timeout(function () {
+    $timeout(function () {
         vm.loading = false;
-    }, 3000);*/
+
+        if ($location.url() !== '/') {
+            vm.browse = true;
+        }
+    }, 2000);
 
     /*vm.openModal = function () {
         var modalInstance = $uibModal.open({
@@ -32,13 +41,13 @@ angular.module('bitzer.controllers', [])
 /**
  * Modal controller
  */
-.controller('modalController', ['$scope', '$modalInstance', function () {
+/*.controller('modalController', ['$scope', '$modalInstance', function () {
     var vm = this;
 
     vm.dismiss = function () {
         $modalInstance.dismiss();
     };
-}])
+}])*/
 
 
 /**
