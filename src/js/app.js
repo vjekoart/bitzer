@@ -3,6 +3,7 @@
 angular.module('bitzerApp', [
     'ngRoute',
     'ngAnimate',
+    'ui.bootstrap',
     'bitzer.controllers'
 ])
 
@@ -11,6 +12,9 @@ angular.module('bitzerApp', [
  */
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
+        .when('/', {
+
+        })
         .when('/news', {
             templateUrl: './templates/news.html',
             controller: 'newsController as news'
@@ -23,7 +27,7 @@ angular.module('bitzerApp', [
             templateUrl: './templates/gigs.html',
             controller: 'gigsController as gigs'
         })
-        .when('/page/:pageSlug', {
+        .when('/page/:pageName', {
             templateUrl: './templates/page.html',
             controller: 'pageController as page'
         })

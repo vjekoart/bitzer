@@ -8,11 +8,13 @@
         <script src="./assets/angular.min.js"></script>
         <script src="./assets/angular-route.min.js"></script>
         <script src="./assets/angular-animate.min.js"></script>
+        <script src="./assets/ui-bootstrap-tpls-0.14.0.min.js"></script>
         <script src="./js/app.js"></script>
 
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="./assets/fa/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./css/app.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+        <link rel="stylesheet" type="text/css" href="./assets/fa/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./assets/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/app.css">
 
         <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,6 +27,9 @@
                 <img src="./img/profile.png" class="loading-animation">
             </div>
         </div>
+        <!--<div class="newsletter" ng-if="!skeleton.loading">
+            <a href="#" ng-click="skeleton.openModal()"><i class="fa fa-envelope-o xs-big"></i><span class="hidden-xs">Newsletter</span></a>
+        </div>-->
         <div class="social-media" ng-if="!skeleton.loading">
             <ul>
                 <li><a href="https://soundcloud.com/thedegsmusic" aria-label="Soundcloud"><i class="fa fa-soundcloud"></i></a></li>
@@ -33,20 +38,21 @@
                 <li><a href="https://www.youtube.com/channel/UCpGIgDBS0AnDsa_5Bm7OYDw/" aria-label="YouTube"><i class="fa fa-youtube-square"></i></a></li>
             </ul>
         </div>
-        <header ng-if="!skeleton.loading">
+        <header class="container" ng-if="!skeleton.loading">
+            <h1 class="sr-only">The Degs</h1>
             <div class="image">
                 <img src="./img/the_degs_white.png">
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Music</a></li>
-                    <li><a href="#">Gigs</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#/news">News</a></li>
+                    <li><a href="#/music">Music</a></li>
+                    <li><a href="#/gigs">Gigs</a></li>
+                    <li><a href="#/page/about">About</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div ng-view autoscroll="true"></div>
+        <div ng-view id="view" class="container"></div>
     </body>
 </html>

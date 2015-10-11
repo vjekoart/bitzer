@@ -1,1 +1,17 @@
-<!-- HTML template for newsletter subscription option -->
+<div class="modal-header">
+    <h2>Newsletter</h2>
+</div>
+<div class="modal-body">
+    <form name="newsletterForm" novalidate>
+        <div class="form-group">
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" class="form-control" id="email" name="email" ng-model="modal.email" placeholder="Enter your e-mail address" required>
+        </div>
+        <div ng-show="modal.formError" class="help-block">
+            <p class="solo alert">Please enter your e-mail address.</p>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <p>Newsletter privacy policy and shit</p>
+</div>

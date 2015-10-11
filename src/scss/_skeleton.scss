@@ -1,13 +1,18 @@
 /* _skeleton.scss */
 
+#view {
+    margin-bottom: 3rem;
+}
+
 body {
+    max-width: 100vw;
     background-color: $brand-color;
 
     #loader, header {
         position: relative;
+        justify-content: center;
         display: flex;
         align-items: center;
-        justify-content: center;
 
         width: 100vw;
         height: 100vh;
@@ -41,13 +46,25 @@ body {
     }
 
     .newsletter {
+        position: absolute;
+        top: 2.5vh;
+        left: 15px;
 
+        z-index: 420;
+
+        a {
+            text-transform: uppercase;
+
+            .fa {
+                padding-right: 0.5rem;
+            }
+        }
     }
 
     .social-media {
         position: absolute;
         top: 2.5vh;
-        right: 2.5vw;
+        right: 15px;
 
         z-index: 420;
 

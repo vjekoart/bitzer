@@ -1,5 +1,95 @@
 /* _modules.scss */
 
+
+/**
+ * Newsletter
+ */
+.modal.newsletter {
+    .modal-content {
+        border-radius: 0;
+    }
+
+    .modal-header {
+        padding: 0;
+
+        h2 {
+            margin: 0;
+            padding: 1.5rem;
+
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+
+            color: $brand-color;
+        }
+
+        border-bottom: 1px solid $gray-color;
+    }
+
+    .modal-body {
+        margin: 0;
+        padding: 1.5rem;
+
+        .form-group {
+            margin: 0;
+        }
+
+        .form-control {
+            height: 2rem;
+            margin: 0;
+            padding: 0 0.5rem;
+            font-size: 1rem;
+            line-height: 2rem;
+            border-radius: 0;
+        }
+    }
+}
+
+
+.box {
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    border-left: 1px solid $gray-color;
+
+    overflow: auto;
+
+    .time {
+        display: inline-block;
+        margin-bottom: 0.75rem;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        color: $gray-color;
+
+        .fa {
+            padding-right: 0.5rem;
+        }
+    }
+}
+
+.box.music {
+    padding: 1rem;
+    background-color: rgba($white-color, 0.05);
+    border-left: none;
+
+    .image {
+        padding: 0;
+    }
+
+    .info {
+        padding: 0 0 0 1rem;
+
+        .release-info {
+            display: block;
+            margin-bottom: 0;
+            color: $gray-color;
+        }
+    }
+
+    .fa {
+        padding-left: 0.5rem;
+    }
+}
+
+
 /**
  * NEWS
  */
